@@ -1,0 +1,10 @@
+1.建com.dgut.spring.di Book 类 的 javabean
+2.建spring-di.xml         配置  bean 01----------   set方法  <property id=" "  class=" " >
+3.建测试方法        ApplicationContext  ac= new ClassPathXmlApplicationContext("spring-di.xml");
+		Book book=ac.getBean("Book1",Book.class);  
+			      02-----------   construct 方法  <construct-arg  value=""  index="">  
+
+1在容器创建时 创建bean
+2  property 子标签 value  <value><![CDATA【】]> </value>
+3.  value  可能是个类 author      value 改为 ref 引用  bean的id     //  也可内部类  
+4.  属性是集合 List map          <bean>   <property >  <list > <value>           //   ref                在外面定义list  util：list
